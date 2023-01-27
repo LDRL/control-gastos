@@ -1,0 +1,12 @@
+version: "3.5"
+services:
+  app: 
+    image: node:14-alpine
+    container_name: react-gastos
+    volumes: 
+      - ./:/app_gastos
+    working_dir: /app_gastos
+    ports:
+      - 5173:5173
+    command: npm start
+    tty: true
